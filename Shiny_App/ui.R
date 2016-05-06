@@ -20,7 +20,7 @@ shinyUI(fluidPage(
                                  "Panicle Length" = "Panicle.length",
                                  "Plant Height" = "Plant.height",
                                  "Protein Content" = "Protein.content")),
-     actionButton("Button", "Button")),
+     actionButton("reg", "Region")),
     
 
 
