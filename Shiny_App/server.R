@@ -1,4 +1,5 @@
 # server.R
+# Using ps4.2500.RData data frame
 # Traits protein content, amylose content, blast resistance, 
 # plant height, panicle length, flag leaf length, alkali spreading value
 library(shiny)
@@ -9,3 +10,4 @@ shinyServer(
   function(input, output) {
   }
 )
+# output name boxplot
