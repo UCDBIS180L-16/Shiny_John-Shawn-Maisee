@@ -5,9 +5,28 @@
 library(shiny)
 library(ggplot2)
 library(reshape2)
-load("data/rice_shiny_data")
 shinyServer(
   function(input, output) {
-  }
-)
+    # output name boxplot
+
+    plant <- read.csv("data/shiny.data")
+      pl <- reactiveValues(data = NULL)
+      observeEvent(input$reg, {
+         pl$data <- ggplot(data = plant,
+                               aes_string(x = "Region", y= input$trait, fill = "Region"))
+     
+      })
+      observeEvent(input$anc, {
+        pl$data <- ggplot(data = plant,
+                            aes_string(x = "popID", y = input$trait, fill = "popID"))
+        
+      })
+      output$boxplot <- renderPlot({
+        if (is.null(pl$data)) return()
+        pl$data + geom_boxplot()
+      
+      })
+})
+    
 # output name boxplot
+
