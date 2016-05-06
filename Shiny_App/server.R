@@ -8,8 +8,8 @@ library(reshape2)
 shinyServer(
   function(input, output) {
     # output name boxplot
-
     plant <- read.csv("data/shiny.data")
+    plant$popID <- as.character(as.numeric(plant$popID))
       pl <- reactiveValues(data = NULL)
       observeEvent(input$reg, {
          pl$data <- ggplot(data = plant,
