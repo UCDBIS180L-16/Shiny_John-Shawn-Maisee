@@ -23,8 +23,10 @@ shinyUI(fluidPage(
                                  "Panicle Length" = "Panicle.length",
                                  "Plant Height" = "Plant.height",
                                  "Protein Content" = "Protein.content")),
-     actionButton("reg", "Button")),
-    
+
+     actionButton("reg", "Region"),
+     actionButton("anc", "Ancestral")),
+
 
 
     mainPanel(plotOutput("boxplot"))
