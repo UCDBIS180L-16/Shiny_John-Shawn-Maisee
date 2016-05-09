@@ -28,6 +28,7 @@ shinyUI(fluidPage(
      actionButton("reg", "Region"),
      actionButton("anc", "Ancestral"),
      br(),
+     br(),
     p("Click a button to update the value displayed in the main panel."))
   ,
 
