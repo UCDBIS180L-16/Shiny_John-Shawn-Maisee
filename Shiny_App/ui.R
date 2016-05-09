@@ -24,6 +24,7 @@ shinyUI(fluidPage(
                                  "Plant Height" = "Plant.height",
                                  "Protein Content" = "Protein.content")),
 
+      h5(strong("Sort by Region or Ancestral Population")),
      actionButton("reg", "Region"),
      actionButton("anc", "Ancestral")),
 
