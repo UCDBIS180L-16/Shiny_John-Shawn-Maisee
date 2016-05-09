@@ -3,8 +3,11 @@ library(shiny)
 
 shinyUI(fluidPage(
   titlePanel("Interactive Viewer of Rice Phenotypes"),
+  helpText("This web application was designed in order to allow users to visualize different phenotypic aspects among over 400 different varieties of rice form around the world. With this webapp, one can assess variation among the accessions based on traits ranging from Panicle Length to Protein Content. Variation for each trait within the entire population can be further assessed based on ancestral population structure."),
+    
   sidebarLayout(
     sidebarPanel(
+   
       radioButtons("plot",
                    "Choose a plot to display:",
                    c("histogram",
@@ -20,7 +23,7 @@ shinyUI(fluidPage(
                                  "Panicle Length" = "Panicle.length",
                                  "Plant Height" = "Plant.height",
                                  "Protein Content" = "Protein.content")),
-     actionButton("Button", "Button")),
+     actionButton("reg", "Button")),
     
 
 
@@ -28,4 +31,3 @@ shinyUI(fluidPage(
       
 )
 ))
-
