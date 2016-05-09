@@ -21,12 +21,13 @@ shinyUI(fluidPage(
                                  "Plant Height" = "Plant.height",
                                  "Protein Content" = "Protein.content")),
      actionButton("reg", "Region"),
-     actionButton("anc", "Ancestral")),
-    
+     actionButton("anc", "Ancestral"),
+    p("Click the button to update the value displayed in the main panel."))
+  ,
 
 
     mainPanel(plotOutput("boxplot"))
       
-)
-))
+
+)))
 
