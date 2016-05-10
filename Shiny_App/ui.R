@@ -8,10 +8,12 @@ shinyUI(fluidPage(
            from Panicle Length to Protein Content. Trait variation among all rice accessions within the entire population can be further assessed 
            based on ancestral population membership (determined by Multi-Dimensional-Scaling of a SNP dataset covering over 40,000 SNP markers from 
            the rice genome), or by the geographical region in which they were found to naturally occur. To use the app, use the Radio Button
-           widget to select the type of plot desired for visualizing the data. Next, using the Select Input drop down widget to choose the
-           phenotypic trait you want to visualize. Finally, choose whether you wise to visualize the data based on either the geographic region 
-           or ancestral population membership of each rice accession using the Action Button. The plot will automatically render and change when 
-           the type of plot is modified, but an action button must be clicked when the phenotypic trait selection is switched."),
+           widget to select the type of plot desired for visualizing the data. Next, use the Select Input drop down widget to choose the
+           phenotypic trait you want to visualize. Finally, choose whether you wish to visualize the data based on either the geographic region 
+           or ancestral population membership of each rice accession by clicking either of the two Action Buttons at the bottom of the side pannel. 
+           The plot will automatically render and change when a different plot type is specified, a different phenotypic trait is selected, or when
+           toggling back and forth between ancestral or region based grouping. The default plot shows a histogram for the Alkalai Spreading Value data
+           where all rice accessions are grouped together based on their indigenous region."),
     
   sidebarLayout(
     sidebarPanel(
