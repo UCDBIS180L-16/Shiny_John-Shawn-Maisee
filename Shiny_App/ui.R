@@ -35,11 +35,8 @@ shinyUI(fluidPage(
       h5(strong("Sort by Region or Ancestral Population")),
      actionButton("reg", "Region"),
 
-     actionButton("anc", "Ancestral"),
-     br(),
-     br(),
-    p("Click a button to begin"))
-  ,
+     actionButton("anc", "Ancestral")),
+
 
 
     mainPanel(plotOutput("boxplot"))

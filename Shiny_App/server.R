@@ -28,8 +28,11 @@ shinyServer(
         })
         
       output$boxplot <- renderPlot({
-        if (is.null(pl$data)) return()
-        if (input$plot == "violin plot"){
+        if (is.null(pl$data)) {
+          ggplot(data = plant, aes_string(x = input$trait, fill = "Region")) + facet_grid(~Region) + geom_histogram()
+          
+        }
+        else if (input$plot == "violin plot"){
           pl$data + geom_violin(aes_string(y = input$trait))
         } else if (input$plot == "boxplot"){
           pl$data + geom_boxplot(aes_string(y = input$trait))
