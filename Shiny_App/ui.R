@@ -38,7 +38,7 @@ shinyUI(fluidPage(
      actionButton("anc", "Ancestral"),
      br(),
      br(),
-    p("Click a button to update the value displayed in the main panel."))
+    p("Click a button to begin"))
   ,
 
 
